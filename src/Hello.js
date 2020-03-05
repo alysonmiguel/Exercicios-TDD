@@ -5,4 +5,7 @@ export default class Hello {
 	sayHello() {
 		return "hello"
 	}
+	mult(x, y) {
+		return x*y;
+	}
 }
