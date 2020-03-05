@@ -35,7 +35,12 @@ class Fila {
 	}
 
 	toString() {
-
+		let result = "[";
+		for (let i = 0; i < this.fim; i++) {
+			result += `${this.dados[i]}`;
+		}
+		result += "]";
+		return result;
 	}
 
 	size() {

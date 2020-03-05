@@ -1,47 +1,34 @@
-class Pilha{
-    constructor(tamanho){
-        this.tamanho = tamanho;
-        this.dados = []; 
-        this.topo = -1;
+import Pilha from "./Pilhas"
+
+class TrocarElemento{
+    
+    constructor(){
+        this.pi = new Pilha(5);
+        this.aux = new Pilha(5);
+        this.fin = new Pilha(5);
     }
 
-    push(newData){
-        if(this.isFull()){
-            throw new Error("Overflow");
-        }else{
-            this.dados[++this.topo] = newData;
-        }
+
+    push(novo){
+        this.pi.push(novo);
     }
 
-    pop(){
-        if(this.isEmpty()){
-            throw new Error("Está vazio")
-        }else{
-           return this.dados[this.topo--];
-        }
-    }
- 
-    size(){
-        return  this.topo +1;
+    Inverte(){
+        this.fin.push(this.pi.pop());
+
+       while(this.pi.size() != 1) {
+           this.aux.push(this.pi.pop()); 
+        }  
+
+      while(this.aux.size() >= 1) {
+            this.fin.push(this.aux.pop()); 
+        }  
+        this.fin.push(this.pi.pop());
+
+        return this.fin.toString();
     }
 
-    isFull(){
-      return this.size() == this.tamanho;
-    }
 
-    isEmpty(){
-        return this.size() === 0
-    }
-
-    top(){
-        if(this.isEmpty()){
-            throw new Error("Está vazio")
-        }else{
-            return this.dados[this.topo];
-        }
-    }
-   
 }
 
-// so pode ta no pop push peek
-export default Pilha;
+export default TrocarElemento;

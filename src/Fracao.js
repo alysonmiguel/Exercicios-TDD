@@ -1,5 +1,5 @@
 class Fracao{
-    
+     
     constructor(numerador, denominador){
        this.dados = [numerador, denominador];
     }

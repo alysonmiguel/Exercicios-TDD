@@ -86,7 +86,16 @@ class Pilha {
 	 * Retorna uma string contendo todos os elementos da Pilha.
 	 * @returns {string} - Conteúdo da Pilha formatado.
 	 */
-	toString() {
+	toStringBinario() {
+		let result = "[";
+		for (let i = this.topo; i >= 0; i--) {
+			result += `${this.dados[i]}`;
+		}
+		result += "]";
+		return result;
+	}
+
+	toString(){
 		let result = "[";
 		for (let i = 0; i <= this.topo; i++) {
 			result += `${this.dados[i]}`;

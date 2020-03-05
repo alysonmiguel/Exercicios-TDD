@@ -1,8 +1,12 @@
 import Fila from "./Fila";
 
 class PilhaComFila {
-  fila1 = new Fila(5);
-  fila2 = new Fila(5);
+  
+  constructor(){
+    this.fila1 = new Fila(5);
+    this.fila2 = new Fila(5);
+
+  }
 
   push(newData) {
     if (this.fila1.isFull()){
@@ -26,10 +30,6 @@ class PilhaComFila {
     }else{
        this.fila1.enqueue(newData);
     }
-     
-    console.log(this.fila1);
-    console.log(this.fila2);
-
   }
 
   pop(){
