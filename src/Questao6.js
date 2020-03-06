@@ -36,22 +36,18 @@ class DeQ {
     }
   
     RemoverInicio() {
-        this.fila1.dequeue();
+       this.fila1.dequeue();
     }
   
     RemoverFim() {
-        for (let i = 0; i <= this.fila1.size(); i++) {
+        for (let i = 0; i < this.fila1.size(); i++) {
             this.fila2.enqueue(this.fila1.dequeue());
         }
-
         this.fila1.clear();
-
-        for (let i = 0; i < this.fila2.size(); i++) {
-          this.fila1.enqueue(this.fila2.dequeue());
+        for (let i = 0; i <= this.fila2.size(); i++) {
+            this.fila1.enqueue(this.fila2.dequeue());
         }
-
-        return this.fila2.dequeue();
-
+        
     }
 
     toString(){

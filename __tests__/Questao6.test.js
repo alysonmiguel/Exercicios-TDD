@@ -9,8 +9,7 @@ beforeEach(() => {
 test("Inserir no inicio", () => {
     fila.inserirInicio(1);
     fila.inserirInicio(3);
-    fila.inserirInicio(5);
-    expect(fila.size()).toBe(3);
+    expect(fila.size()).toBe(2);
 });
 
 test("Inserir no fim", () => {
@@ -22,7 +21,6 @@ test("Inserir no fim", () => {
 expect(fila.toString()).toBe("[1325]");
 });
 
-/*
 test("Remover no inicio", () => {
     let fila = new DeQ();
     fila.InserirFim(1);
@@ -40,4 +38,3 @@ test("Remover no fim", () => {
     fila.RemoverFim();
 expect(fila.toString()).toBe("[12]");
 });
-*/
